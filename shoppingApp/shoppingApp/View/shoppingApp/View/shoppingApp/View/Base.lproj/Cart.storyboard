@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cart-->
+        <scene sceneID="hDU-UB-dc9">
+            <objects>
+                <viewController storyboardIdentifier="Cart" title="Cart" id="RKQ-yc-fyE" customClass="CartViewController" customModule="shoppingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5No-OP-YBM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nwK-jq-T8i">
+                                <rect key="frame" x="0.0" y="88" width="375" height="610"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartCell" rowHeight="85" id="lxQ-Hc-WaZ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lxQ-Hc-WaZ" id="kLU-bs-tsl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RKQ-yc-fyE" id="xNZ-ZK-e2i"/>
+                                    <outlet property="delegate" destination="RKQ-yc-fyE" id="XNH-Cu-DTR"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8a-oV-peQ">
+                                <rect key="frame" x="0.0" y="697" width="375" height="115"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sum Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB5-Il-6ve">
+                                        <rect key="frame" x="16" y="19" width="213" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IyV-R4-v0z">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.30383133561643838" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aZ-Fy-QnF">
+                                        <rect key="frame" x="237" y="11" width="130" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.35156097937578606" green="0.7314547082501448" blue="0.96620899438858032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Checkout">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="g8a-oV-peQ" firstAttribute="top" secondItem="DQI-up-YJP" secondAttribute="top" constant="609" id="0J4-Rz-DDL"/>
+                            <constraint firstItem="g8a-oV-peQ" firstAttribute="leading" secondItem="DQI-up-YJP" secondAttribute="leading" id="2WP-Ug-VWe"/>
+                            <constraint firstItem="nwK-jq-T8i" firstAttribute="top" secondItem="DQI-up-YJP" secondAttribute="top" id="43u-Pu-axX"/>
+                            <constraint firstItem="g8a-oV-peQ" firstAttribute="trailing" secondItem="DQI-up-YJP" secondAttribute="trailing" id="KYF-HH-s0L"/>
+                            <constraint firstItem="DQI-up-YJP" firstAttribute="bottom" secondItem="nwK-jq-T8i" secondAttribute="bottom" constant="80" id="Oet-6D-hDl"/>
+                            <constraint firstItem="DQI-up-YJP" firstAttribute="trailing" secondItem="nwK-jq-T8i" secondAttribute="trailing" id="S7D-NF-TBf"/>
+                            <constraint firstItem="nwK-jq-T8i" firstAttribute="leading" secondItem="DQI-up-YJP" secondAttribute="leading" id="blh-HJ-hea"/>
+                            <constraint firstAttribute="bottom" secondItem="g8a-oV-peQ" secondAttribute="bottom" id="pJU-pF-g9e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DQI-up-YJP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Cs-0P-DAw"/>
+                    <connections>
+                        <outlet property="table" destination="nwK-jq-T8i" id="M8f-gM-xxI"/>
+                        <outlet property="txtSumPrice" destination="fB5-Il-6ve" id="yC7-wA-LoI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSj-fd-wgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6596" y="-376.10837438423647"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vk9-WT-NW2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LOb-Jx-Iwh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F8d-3V-W5c">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RKQ-yc-fyE" kind="relationship" relationship="rootViewController" id="3xx-QP-bcH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HSJ-gm-xHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5728.8000000000002" y="-376.10837438423647"/>
+        </scene>
+    </scenes>
+</document>
